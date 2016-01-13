@@ -1,0 +1,4 @@
+H:\new work\austrila\New folder\rajpt\rajpt\bin\rajpt.dll
+H:\new work\austrila\New folder\rajpt\rajpt\bin\rajpt.pdb
+H:\new work\austrila\New folder\rajpt\rajpt\obj\Release\rajpt.dll
+H:\new work\austrila\New folder\rajpt\rajpt\obj\Release\rajpt.pdb

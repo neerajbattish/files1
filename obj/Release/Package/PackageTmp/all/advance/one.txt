@@ -1,0 +1,110 @@
+Cuckoo based Enhanced Pegasis for Energy Efficiency in WSN
+author1, author2
+1Research Fellow, 2Asst. Professor
+1,2Institute,Place,Punjab.
+1email@yahoo.com , 2email@gmail.com
+
+ 
+Abstract: Due to non inheritable restriction of sensors there is always a vital issue on the way to utilize restricted energy effectively. Thus, solving the efficient-energy coverage problem is an important issue for a WSN. So, it is necessary to schedule the activities of the devices in a WSN to save the networks limited energy and prolong its lifetime. So, for increases the lifetime of the network, number of alive nodes present in the network and energy efficiency of the network increases. PEGASIS protocol uses for  reducing  the  delay  and  enhancing  the  energy  efficiency  of  the  network  because PEGASIS protocol is based on chaining structure. In every chain one node is selected as cluster head, which do the responsibility of routing from lower level cluster to higher level cluster. In this proposed work, ,  the  energy  efficiency  of  PEGASIS  protocol  is  improved  and  also increases the number of alive nodes using cuckoo search optimization. The simulation results are performed to verify the effectiveness of the  for solving the Energy Efficiency problem in comparison with other algorithms.
+
+Keywords—Wireless Sensor Network, Energy Consumption, Efficient Energy Coverage, Cuckoo Search Optimization.
+
+	INTRODUCTION
+Over the last half a century, computers have exponentially increased in processing power and at the same time decreased in both size and price. These rapid advancements led to a very fast market in which computers would participate in more and more of our society’s daily activities. In recent years, one such revolution has been taking place, where computers are becoming so small and so cheap, that single purpose computers with embedded sensors are almost practical from both economical and theoretical points of view. Wireless sensor networks are beginning to become a reality, and therefore some of the long overlooked limitations have become an important area of research.
+Wireless Sensor networks are made of several hundred to several thousand of sensors propagated in a geographical area. There are many different applications for such networks including military, environment monitoring, agriculture, transportation control, disaster, fire fighting and protection, and home applications. Sensors are very simple identical electronic devices equipped with a processor and small storage memory and a communication channel. The sensors can communicate to each other through wireless links, and most of the times they use radio frequency channels for the purpose of communication.
+In many applications the sensors perform measurements of specific metrics like temperature, pressure, movements or other physical values in a periodic or non-periodic way. Most of the times it is desired to collect the data of all sensors in a specific station for processing, archiving and other purposes. This station is a data sink, and it has enough processing power, storage space, and capability of communicating to the sensors. We will call this station the central node in the rest of the paper. For the purpose of communication to the central node, the sensors relay the packets of each other in a multi-hop way.
+A sensor network consists of a large number of small and low-cost devices with sensing, transmitting and processing capabilities. Main goal of the operation is to observe a region and gather and relay information to a sink node or set of sink nodes which is called as Base Station (BS).
+Forwarding the data to the BS is possible in two ways:
+	Direct Hop Communication
+	Multihop Communication
+
+In the first case every sensor transmits its data directly to the sink, but in the second case, the sensors are communicating with the neighbours that forward the information in the direction of the sink. The sensor networks can be also categorized by the periodicity of data transmissions named as:
+	Time-Driven Network
+	Event-Driven Network
+	Query-Driven Network
+In a Time-driven network every node sends messages periodically, while in an Event-driven one a node sends message only when sensing a phenomenon. The third category is the Query-driven network approach, when the sensors send data only after receiving a query from the BS. There are also hybrid networks that combine the previous three models.
+
+	Leach & Pegasis Protocols
+
+Low Energy Adaptive Clustering Hierarchy (LEACH) is a TDMA-based MAC protocol which is integrated with clustering and a simple routing protocol in wireless sensor networks (WSNs). The goal of LEACH is to lower the energy consumption required to create and maintain clusters in order to improve the life time of a wireless sensor network.
+
+LEACH:
+LEACH is a hierarchical protocol in which most nodes transmit to cluster heads, and the cluster heads aggregate and compress the data and forward it to the base station (sink). Each node uses a stochastic algorithm at each round to determine whether it will become a cluster head in this round. LEACH assumes that each node has a radio powerful enough to directly reach the base station or the nearest cluster head, but that using this radio at full power all the time would waste energy.
+
+Nodes that have been cluster heads cannot become cluster heads again for P rounds, where P is the desired percentage of cluster heads. Thereafter, each node has a 1/P probability of becoming a cluster head in each round. At the end of each round, each node that is not a cluster head selects the closest cluster head and joins that cluster. The cluster head then creates a schedule for each node in its cluster to transmit its data.
+
+All nodes that are not cluster heads only communicate with the cluster head in a TDMA fashion, according to the schedule created by the cluster head. They do so using the minimum energy needed to reach the cluster head, and only need to keep their radios on during their time slot. LEACH also uses CDMA so that each cluster uses a different set of CDMA codes, to minimize interference between clusters.
+
+PEGASIS:
+Power Efficient Gathering in Sensor Information System PEGASIS is a typical hierarchical-based routing protocol. As an enhancement algorithm of LEACH, PEGASIS is a classical chain-based routing protocol. It saves significant energy compared with the LEACH protocol by improving the cluster configuration and the delivery method of sensing data. However, the PEGASIS protocol also has many problems requiring solutions [Lindsey and Raghavendra[2002]].
+
+In recent years, researchers have proposed many improved algorithms based on PEGASIS such as PEG-Ant, PDCH and EEPB . Among them, EEPB adopts threshold when constructing chain to decrease the formation of LL, selects the leader by considering both the residual energy of nodes and the distance between node and BS, and adjusts the reselection frequency of leader according to remaining nodes in the network. EEPB overcomes several problems over PEGASIS but still has deficiencies as follows:
+
+a) When EEPB builds a chain, the threshold adopted is uncertain and complex to determine, which causes the inevitability of LL if valued inappropriately.
+b) When EEPB selects the leader, it ignores the suitable proportion of nodes energy and distance between node and BS which optimizes the leader selection according to various application environments.
+
+PEGASIS is entirey based upon chain-based routing technique, on which the third objective is based.
+
+	PROPOSED WORK
+Due to huge transmission of data through the sensor nodes, lots of energy wastage exists in wireless sensor network, which decreases the network lifetime. The lifetime of the network depends upon each transmission means how much energy is spend in each transmission. So, for increases the lifetime of the network, number of alive nodes present in the network and energy efficiency of the network increases. PEGASIS protocol uses for reducing the delay and enhancing the energy efficiency of the network because PEGASIS protocol is based on chaining structure. In every chain one node is selected as cluster head, which do the responsibility of routing from lower level cluster to higher level cluster. In this work, cuckoo based energy efficient pegasis protocol has been proposed to achieve the following objectives:
+	With the number of rounds improving number of alive nodes.
+	To analyze and developing high energy efficiency routing protocol with PEGASIS.
+	On the basis of cuckoo search define opportunistic routing.
+Basic Design of work
+Initializing the WSN parameters such as number of nodes, routing protocols, area size, base station, energy transmitted/received, amp energy and data packets. Then the deployment of nodes is done. The whole scenario of WSN is established. The protocol of WSN named PEGASIS is modified by using cuckoo search optimization then it is implemented in the scenario created. The overall performance will be analyzed.
+ 
+Fig 1. Basic Design
+Radio Model for Pegasis
+The basic standard model, where radio dissipates Eelec=50nj/bit to run the circuitry of both transmitter & receiver. For the transmitter amplifier ?amp=100pj/bit/m2. Due to channel transmission an energy loss r2 is considered. To reach the intended recipient, the radio has power control & can expand the minimum required energy. The following equations are used for a k-bit message & to calculate transmission and receiving costs a distance d.
+For Transmission:
+E_tx (k,d)=E_(tx-elec) (k)+E_(tx-amp) (k,d)  (1)
+E_tx (k,d)=E_elec*k+E_amp*k*d^2        (2)
+For Receiving 
+E_TX (K)=E_(TX-elec) (K)             (3)
+E_TX (k)=E_elec*k            (4)
+
+Cuckoo Search Algorithm
+New solutions are obtained with the following equation:
+E_tx (k,d)=E_elec*k+E_amp*k*d^2             (5)
+Lev’y describes the random walk to obtaining the new solutions. a is the step size which is adjusted according to the scale of problem of interest. Lev’y flight is a random walk and the step size of  lev’y also random with the distribution as follows: 
+?Lev?^' y~u=L^-        (1<?=3)            (6)
+Rastrigin function is non-convex function. This is used for testing problem for optimization algorithms. Firstly it was proposed by the Rastrigin as a 2-dimenional function.
+Equation for Rastrigin function:
+ 
+f(x)=An+?_(i=1)^n¦[xi^2-Acos(2pxi)]                  (7)
+where A=10 & xi?[-5.12,5.12]
+It has a global minimum value at x=0
+
+	SIMULATION & ANALYSIS
+Simulation Setup
+In this work, chain based approach is used which is based on the enhanced PEGASIS. Cuckoo search is used to implement PEGASIS for energy efficiency & network life. This simulation focuses on the number of alive sensor nodes and the energy efficiency of the network. For different algorithms network average energy & cost per iteration are the important indications to measuring the performance. In this simulation, 100 nodes are placed randomly in 100 X 100 area. The simulation parameters used are shown below: 
+
+
+PARAMETERS	VALUE
+Number of nodes	100
+Area	100*100
+Transmitted energy (Etx)	50nj/bit
+Received energy (Erec)	50nj/bit
+Efs	10pj/bit
+Emp	0.0013pj/bit
+Eo	0.5
+Rmax	2500
+Da	0.6
+Eda	5nj/bit
+Table 1: Simulation Parameters.
+
+A proposed chain based approach which is based on enhanced PEGASIS using cuckoo search approach is used to implement the desired solution for energy efficiency & to improve network lifetime. The simulation area is considered as 100 × 100 meters2 with 100 sensor nodes has been considered. The enhanced chaining based on Cuckoo PEGASIS is as shown in fig 2.
+ 
+Fig 2. chain formation in cuckoo based PEGASIS
+Parameter Analysis
+Number of Alive Nodes 
+In case of cuckoo based PEGASIS, the numbers of alive nodes are more as compare to the previous work because in our work, an efficient routing optimization technique is used in an energy saving manner. We have saved a lot of resources by using innovative chain based approach. Fig 3 is showing the number of alive nodes with time.
+ 
+Fig 3
+ Energy Consumption
+Fig 4 explains that the energy consumption is less in case of proposed work using Cuckoo based PEGASIS protocol because in opportunistic routing the routes are smaller than previous routes, that is why the energy consumption is less. The average energy of all nodes per round in cuckoo based PEGASIS is higher than IEEPB. This proves that the energy efficiency of cuckoo based PEGASIS is better than IEEPB.
+ 
+Fig 4
+	CONCLUSION
+Wireless sensor network consist of number of sensor nodes to form a large network. Environment conditions like sound, temperature, pressure, direction, speed etc are measured by WSN. In WSN lots of energy wastage in sensor nodes which decreases the networks lifetime. The lifetime of the network directly depends upon the transmission, in each transmission how much energy is spent. To increases the lifetime of the network a chain based PEGASIS protocol used. Which is an energy efficient protocol; this reduces the delay present in the network and enhancing the energy efficiency of the network. In each chain only single node is selecting as a cluster head. Cluster head knows all the information of their chain members. PEGASIS protocol with cuckoo search optimization algorithm increases the number of alive node and energy efficiency of the network. At the end, we can conclude that the proposed work enhances the performance of system which can be used in future work for further improvement of WSNs. Further in future work, to enhance the protocol by improving the more number of alive nodes for efficient network life.
+

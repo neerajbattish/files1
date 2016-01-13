@@ -1,0 +1,149 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="loginmaster.master.cs" Inherits="WebApplication1.login.loginmaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Local Cloud Environment</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="Stylesheet" href="../dashbrd_style.css" />
+    <script type="text/javascript" src="../js/jquery-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../js/login.js"></script>
+    <!-- Add jQuery library -->
+    <script type="text/javascript" src="../lib/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
+    <asp:ContentPlaceHolder ID="Head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .button
+        {
+            border: solid 1px #c0c0c0;
+            background-color: #eeeeee;
+            font-family: verdana;
+            font-size: 11px;
+        }
+        
+        .modalBg
+        {
+            background-color: #cccccc;
+            filter: alpha(opacity=80);
+            opacity: 0.8;
+        }
+        
+        .modalPanel
+        {
+            background-color: #ffffff;
+            border-width: 3px;
+            border-style: solid;
+            border-color: Gray;
+            padding: 3px;
+            width: 320px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+    </asp:ToolkitScriptManager>
+    <div class="BackgroundGradient">
+    </div>
+    <div class="BodyContent">
+        <div class="BorderBorder">
+            <div class="BorderBL">
+                <div>
+                </div>
+            </div>
+            <div class="BorderBR">
+                <div>
+                </div>
+            </div>
+            <div class="BorderTL">
+            </div>
+            <div class="BorderTR">
+                <div>
+                </div>
+            </div>
+            <div class="BorderT">
+            </div>
+            <div class="BorderR">
+                <div>
+                </div>
+            </div>
+            <div class="BorderB">
+                <div>
+                </div>
+            </div>
+            <div class="BorderL">
+            </div>
+            <div class="BorderC">
+            </div>
+            <div class="Border">
+                <div class="Header">
+                    <div class="HeaderTitle">
+                        <h1>
+                            <a href="#">Cloud Environment</a></h1>
+                        <h2>
+                            </h2>
+                    </div>
+                </div>
+                <div class="Menu">
+                    <ul>
+                    </ul>
+                </div>
+                <div class="Columns">
+                    <div class="Column1">
+                        <div class="BlockBorder">
+                            <div class="BlockBL">
+                                <div>
+                                </div>
+                            </div>
+                            <div class="BlockBR">
+                                <div>
+                                </div>
+                            </div>
+                            <div class="BlockTL">
+                            </div>
+                            <div class="BlockTR">
+                                <div>
+                                </div>
+                            </div>
+                            <div class="BlockT">
+                            </div>
+                            <div class="BlockR">
+                                <div>
+                                </div>
+                            </div>
+                            <div class="BlockB">
+                                <div>
+                                </div>
+                            </div>
+                            <div class="BlockL">
+                            </div>
+                            <div class="BlockC">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="MainColumn">
+                        <div class="ArticleBorder">
+                            <div class="Article">
+                                <asp:ContentPlaceHolder ID="Content" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Footer">
+                    <asp:ContentPlaceHolder ID="Footer" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <a href="#"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <asp:ContentPlaceHolder ID="AfterBody" runat="server">
+    </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>

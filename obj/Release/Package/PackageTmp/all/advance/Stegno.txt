@@ -1,0 +1,59 @@
+Cost-Aware Scheduling Algorithm Based on PSO in Cloud Computing Environment [25]
+G. Zhao proposed a modified algorithm based on PSO to solve the task scheduling problem in cloud computing environments. Specifically, by adding a cost-aware fitness function to quantify the cost of resource usage, along with the fitness function for time cost, In this paper efforts were made to achieve the goal of minimizing both the processing time and resource usage, and therefore reach a global optimal solution. The author conducted empirical experiments in a simulated cloud computing environment. The results indicated that proposed algorithm outperforms the traditional PSO algorithm.
+PSO Based Hierarchical Task Scheduling with QoS Preference Awareness in Cloud Storage Environment [26]
+J. Wang et. al described that existing task scheduling algorithms which come from cloud computing and have following main shortcomings when they were used into cold storage. These algorithms almost consider from the aspect of the system not from the aspect of the user which results in low user satisfaction rate. These algorithms lack QoS preference awareness ability. These algorithms do not satisfy multi-QoS constraints very well. They introduce “optimal order comparison method” to help users and experts decide the important level of various QoS factors. They do not consider the user experience but, also the expert knowledge of hierarchical weighted. The expert level uses experts’ knowledge and the user level considers users’ experience. For the QoS preference awareness problem, they classify QoS preference and use different weights to describe them. For the multi-QoS constraints problem, they refined the fitness function of the PSO. The simulation results shows method proposed in this paper achieved acceptable user satisfaction rate, and the same time maintains the efficient as traditional PSO based method.
+Task Scheduling using Modified PSO Algorithm in Cloud Computing Environment [27]
+S. Abdi et. al discussed three heuristic approaches for task scheduling in cloud environment and compared with each other. These approaches were PSO algorithm, Genetic algorithm and modified PSO algorithm for efficient task scheduling.  PSO algorithm and genetic algorithm were the most famous algorithms for scheduling tasks in distributed systems. In order to improve the performance of standard PSO algorithm the modified PSO algorithm was suggested, in which SJFP (Shortest Job to Fastest Processor) algorithm was merged into standard PSO algorithm for generating the initial population in order to minimize makespan. Experiment depicts that even if both genetic algorithm and PSO algorithm show acceptable results, it can be said that large PSO algorithm shows better results than the genetic algorithm but modified PSO algorithm outperforms these two algorithms from minimizing makespan point of view. This algorithm can be used in cloud computing environment for efficient scheduling of tasks on existing resources, so that completion time of tasks become minimized.
+An Efficient Job Scheduling Algorithm using Min-Min and Ant Colony Concept for Grid Computing [28]
+D. Kaur et. al proposed a Min-Min Ant Colony (MMAC) algorithm that reduces the makespan and maximize resource utilization using the features of both Min-Min algorithm and Ant Colony Optimization. It is a two phase algorithm. In the first phase ant colony concept was used. The ant in the proposed algorithm will continuously originate from the master node. In the second phase, the master node assigns the job to a node that has fewer processes using the min-min strategy. Evaluation of new heuristic was done using JDK and wamp server. The experimental results obtained by applying the proposed algorithm for various problems show that it outperforms the existing scheduling algorithms. This study was only concerned with the number of resources, number of processes and task execution time.
+Particle Swarm Scheduling for Work-Flow Applications in Distributed Computing Environments [29]
+A. Abraham et. Al proposed a variable neighborhood particle swarm optimization (VNPSO) algorithm that is compared with a multi-start particle swarm optimization and multi-start genetic algorithm. They modelled and formulated the scheduling problem for workflow applications in distributed data- intensive computing environments (FDSP). Empirical results demonstrate that the proposed VNPSO algorithm is feasible and effective. VNPSO can be applied in distributed data-intensive applications to meet the specified requirements, including workflow constraints, data retrieval/transfer, job interaction, minimum completion cost, flexibility and availability.
+A Novel Particle Swarm Optimization Approach for Grid Job Scheduling [30]
+H. Izakian et. al presented a version of Discrete Particle Swarm Optimization (DPSO) algorithm for grid job scheduling. Scheduler aims at generating feasible solutions while minimizing makespan and flowtime simultaneously. The performance of the proposed method was compared with the fuzzy PSO. The results show that proposed method performs better then fuzzy PSO.
+
+2.1 Findings from Literature Survey
+All summarized papers shows that the maximum work is done to optimize the overall makespan of the schedule. This is done to make execution faster, reduce the cost for the customers and make full utilization of compute resources. The work in [23] discussed an algorithm to reduce the expectation time for searching targets. A traditional PSO algorithm with a random factor tackle premature convergence problem, and achieve a significant improvement in multi-robot system. Results demonstrate the feasibility, robustness, and scalability of proposed method than previous methods. Total time taken to complete the task is less and stable than traditional PSO-based method which results in low power consumption. [17] Introduced a new algorithm called DVFS Multi- Objective Discrete Particle Swarm Optimization (DVFS-MODPSO) for workflow scheduling in distributed environments such as cloud computing infrastructures. DVFS-MODPSO simultaneously optimizes several conflicting objectives namely, the makespan, cost and energy in a discrete space. [8] Gives a Modified Particle Swarm Optimization (MPSO), the MPSO evaluation had been illustrated using different time, and cost parameters and their effects in the performance measures such as utilization, speedup and efficiency. [25] Add a cost-aware fitness function to quantify the cost of resource use, along with the fitness function for the time and cost, empirical experiments minimize both the processing time and resource usage, and reach a global optimal solution. [18], [28], [8] focus on that the tasks are allocated on the available resources to minimize the execution time in addition to the computation cost. [18] Present a hybrid DPSO performs better than the DPSO and Min-min algorithm and decreased makespan also. Discrete PSO (DPSO) as it has a faster convergence rate than Genetic Algorithm (GA). Also it uses less parameter and makes applications less dependent. The work in [13] shows that the GHPSO achieves better performance than standard particle swarm algorithm used in minimize costs within a given execution time. From the literature, we can say that lot of work has been done in the field of scheduling using PSO. But there is further requirement to reduce makespan.   
+
+
+
+
+
+
+
+Chapter 3
+Problem Formulation and Proposed Work
+3.1 Problem Definition 
+Workflow scheduling is a major challenging issue in cloud computing. Formally, a workflow is represented by a directed acyclic task graph, where T is a finite set of the tasks of a workflow and E denote the edges between the tasks of the workflow. R is a finite set of the cloud resources. The aim of the cloud workflow scheduling process is to map each task from the set to a suitable resource from the set with an objective to optimize the makespan of the workflow. Since it is not possible to find all possible mappings in a reasonable time, cloud workflow scheduling with an optimum makespan is an N-P complete optimization problem. Therefore, the objective of the cloud workflow scheduling process is reformulated to find the task-to-resource mappings for each task of a workflow by approximating the solution.
+3.2 Proposed Work
+From the literature survey, we can say that lot of work has been done in field of scheduling. To solve scheduling problem many algorithms has been used. Hybrid Discrete PSO algorithm has already been used to solve independent task scheduling in grid environment [18]. But in our proposed work we are going to use HDPSO to solve workflow scheduling problem in cloud environment. When PSO algorithm is applied for job scheduling, it results in faster convergence and obtains quicker solutions [31]. PSO works well for most global optimal problems. It takes less computation time to get similar or ever better solutions than existing algorithms.
+Particle Updating Algorithm
+for each particle k = 1, . . ., P do 
+  for each job j = 1, ..., n do
+    q = Xk(j);
+    z = pbestk(j);
+   s = gbestk(j);
+  if q ? z then 
+      Vk(q, j) = Vk(q, j) - c1 × r1;
+      Vk(z, j) = Vk(z, j) + c1 × r1; 
+  End 
+ if q ? s then
+      Vk(q, j) = Vk(q, j) - c2 × r2;
+      Vk(s, j) = Vk(s, j) + c2 × r2;
+   End
+  End
+      for each job j = 1, ..., n do
+    if (?i?(1, 2, ..., m)) Vk(s, j) = max{Vk(i, j)} then
+  Xk(j) = s; 
+       End
+    End
+ End
+V_k^t(i, j) is the element in ith row and jth column of the kth velocity matrix in tth time step of the algorithm and X_k^t(j) indicates the element in jth column of the kth position matrix in tth time stamp[32] .
+A new hybrid algorithm of DPSO and Min-min, named HDPSO, is presented in Figure 3.1 it can be seen that Min-Min provides initial solution for DPSO during the hybrid search process. The algorithm terminates when the maximum number of iterations is reached. The close to optimal solution is obtained by using HDPSO.
+	Initial Swarm
+The initial population of particles is generated randomly for basic PSO algorithm, but in our proposed algorithm, particles are initialized by Min-min algorithm that reduces makespan time.
+	Fitness Function
+The performance of a particle is measured by a fitness value, which is problem specific. The effectiveness of our proposed scheduling method is assessed and evaluated using Makespan. Makespan is the time taken by the cloud system to complete the latest task. 
+For each machine we sum job run time of all tasks that are assigned to that machine and the biggest number is said to be fitness function of that particle.
+Makespan = max{Fi} where Fi is the finish time of each task.
+Here, Makespan is considered as fitness function.
+It can be seen that Min-min provides initial solution for DPSO during the hybrid search process. The algorithm terminates when the maximum number of iterations is reached. 
